@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculator';
+  resulte = ''; 
+
+  getAction(item: any) {
+    this.resulte += item;  
+  }
+
+  equal() {
+    this.resulte = eval(this.resulte).toFixed(3); 
+  }
+
+  reset() {
+    this.resulte = '';
+  }
 }
